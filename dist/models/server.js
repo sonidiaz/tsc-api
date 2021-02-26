@@ -74,12 +74,13 @@ var Server = /** @class */ (function () {
     };
     Server.prototype.dbConnection = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var error_1;
+            var BASE_DB, error_1;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         _a.trys.push([0, 2, , 3]);
-                        return [4 /*yield*/, conection_1.default.authenticate()];
+                        BASE_DB = new conection_1.default();
+                        return [4 /*yield*/, BASE_DB.init().authenticate()];
                     case 1:
                         _a.sent();
                         console.log('paso la base de datos');

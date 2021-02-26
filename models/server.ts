@@ -1,7 +1,7 @@
 import express, {Application} from 'express'
 import userRoutes from '../routes/user'
 import cors from 'cors'
-import db from '../db/conection';
+import DB from '../db/conection';
 
 class Server {
 
@@ -38,7 +38,8 @@ class Server {
   }
   async dbConnection() {
     try {
-      await db.authenticate()
+      const BASE_DB = new DB();
+      await BASE_DB.init().authenticate()
       console.log('paso la base de datos')
     } catch (error) {
       throw new Error(error)

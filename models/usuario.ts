@@ -1,7 +1,8 @@
 import {DataTypes} from 'sequelize'
-import db from '../db/conection';
+import DB from '../db/conection';
 
-const UserModel = db.define('user', {
+const BASE_DB = new DB()
+const UserModel = BASE_DB.init().define('user', {
   name: {
     type: DataTypes.STRING
   },

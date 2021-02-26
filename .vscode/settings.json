@@ -1,0 +1,8 @@
+{
+  "appService.zipIgnorePattern": [
+    "node_modules{,/**}",
+    ".vscode{,/**}"
+  ],
+  "appService.defaultWebAppToDeploy": "/subscriptions/3a938f7c-746e-4d3e-9441-ad0e47e48257/resourceGroups/tsc-rest-api/providers/Microsoft.Web/sites/tsc-res-api-webapp",
+  "appService.deploySubpath": "."
+}

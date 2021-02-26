@@ -1,7 +1,9 @@
 import dotenv from 'dotenv'
 import Server from './models/server';
 
-dotenv.config()
+if(!process.env.NODE_ENV || process.env.NODE_ENV.indexOf('production') === -1) {
+  dotenv.config()
+}
 
 const server = new Server()
 
